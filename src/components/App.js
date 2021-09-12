@@ -1,9 +1,13 @@
 import React from 'react';
-
+import Main from './Main';
+import Resume from './Resume';
 
 const App = () => {
 	return(
-		'App'
+		<div class="content">
+			<Resume />
+			<Main />
+		</div>
 	)
 }
 
