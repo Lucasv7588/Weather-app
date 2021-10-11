@@ -1,8 +1,8 @@
 import React from 'react';
-import { weatherIconsAPI } from '../utils.js';
+import { weatherIconsAPI, convertFarenheit } from '../utils.js';
 
 
-const Card = ({ data, system, units, convertFarenheit }) => {
+const Card = ({ data, system, units }) => {
 
 	let appDate = data.applicable_date.split("-");
 	let date = new Date(appDate[0], appDate[1]-1, appDate[2]);

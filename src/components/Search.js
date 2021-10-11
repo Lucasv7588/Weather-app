@@ -1,23 +1,46 @@
 import React from 'react';
-import Slider from './Slider';
-
+import LocationList from './LocationList'
+import Btn from './Btn'
 
 class Search extends React.Component {
 
+	state = {
+		search: ""
+	}
+
+	handleChange = e =>{
+		this.setState({
+			search: e.target.value
+		})
+	}
 	
 	render(){
-		const { handleTheme, handleSearch } = this.props;
+		const { search } = this.state;
+		const { toggleSearch, changeWoeid } = this.props;
+	
 		return(
-			<div className="search-container">
-				<form className="search-form" onSubmit={handleSearch}>
-					<input className="search-form__input" type="text" name="search" placeholder="Buscar por ciudad"/>
-					<button type="submit" className="search-form__button"><i className="fas fa-search"></i></button>
-				</form>
-				<span className="theme-selector">Theme Selector:</span>
-				<Slider 
-					onClick={handleTheme}
+			<aside className="aside" id="aside">
+				<Btn 
+					text="Volver"
+					className="search-toggle"
+					onClick={toggleSearch}
 				/>
-			</div>
+				<form className="search-form" onSubmit={this.getLocationByName} autoComplete="off">
+					<input 
+						type="text" 
+						name="search" 
+						value={search}
+						onChange={this.handleChange}
+						placeholder="Buscar por ubicación" 
+						className="search-form__input" 
+					/>
+				</form>
+				<LocationList 
+					search={search}
+					changeWoeid={changeWoeid}
+				/>
+
+			</aside>
 		)
 	}
 }

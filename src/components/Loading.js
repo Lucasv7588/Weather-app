@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Loading = () => (
-	<div>
-		Loading...
+	<div className="loader-container">
+		<div className="lds-ring"><div></div><div></div><div></div><div></div></div>
 	</div>
 )
 
