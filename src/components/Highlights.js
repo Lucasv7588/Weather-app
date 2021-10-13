@@ -44,6 +44,7 @@ const Highlights = ({data, units, system}) => {
 				<p className="highlights-item__data">
 					<span>{visibility}</span> {units[1]}
 				</p>
+				<div></div>
 			</div>
 			<div className="highlights-item">
 				<h3 className="highlights-item__title">
@@ -52,6 +53,7 @@ const Highlights = ({data, units, system}) => {
 				<p className="highlights-item__data">
 					<span>{data.consolidated_weather[0].air_pressure}</span> mb
 				</p>
+				<div></div>
 			</div>
 		</div>
 	)

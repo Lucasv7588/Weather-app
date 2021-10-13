@@ -241,6 +241,10 @@ input:checked + .slider:before {
 	letter-spacing: 3px;
 }
 
+.weather-info__api{
+	font-size: .6em;
+}
+
 .toggleSearch{
 	margin-top: 2%;
 	display: inline-block;
@@ -526,11 +530,11 @@ input:checked + .slider:before {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
 
 	.content{
 		grid-template-columns: 100%;
-   		grid-template-rows: 100vh auto;
+   		grid-template-rows: auto auto;
 	}
 
 	.aside{
@@ -551,7 +555,7 @@ input:checked + .slider:before {
 	
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 630px) {
 
 	.cards-container{
 		height: auto;
@@ -565,6 +569,30 @@ input:checked + .slider:before {
 
 	.weather-logo{
 		margin: 25% auto 0;
+	}
+
+	.highlights-item__data {
+		font-size: 18px;
+	}
+
+	.highlights-item__title {
+		font-size: 18px;
+	}
+
+	.highlights-item__other {
+		font-size: 18px;
+	}
+
+	.subtitle {
+		margin: 5% 0;
+	}
+
+}
+
+@media screen and (max-width: 460px) {
+
+	.highlights-item__data {
+		font-size: 15px;
 	}
 
 }

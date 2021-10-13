@@ -53,6 +53,7 @@ const Data = ({ data, system, units, handleTheme, toggleSearch}) => {
 				<p className="weather-info__date">
 					{date.toLocaleDateString("es-AR", options)}
 				</p>
+				<p className="weather-info__api">Datos obtenidos de la api de <a href="https://www.metaweather.com/api/">MetaWeather</a></p>
 			</div>
 		</aside>
 	)
